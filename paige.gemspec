@@ -2,13 +2,14 @@ PKG_FILES = Dir.glob([
   'bin/*',
   'lib/**/*.rb',
   'data/**/*',
+  'examples/**/*',
   "LICENSE",
   "agpl-3.0.txt"
 ])
 
 Gem::Specification.new do |s|
   s.name        = "paige"
-  s.version     = "0.0.1"
+  s.version     = "0.0.2"
   s.summary     = "Paige!"
   s.description = "Likely vaporware alternative API to PrawnPDF"
   s.authors     = ["Gregory Brown"]
