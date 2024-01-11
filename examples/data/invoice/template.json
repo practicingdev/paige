@@ -1,0 +1,13 @@
+[
+  ["move_down", 10],
+  ["text", { "key": "from", "style": "bold"}],
+  ["text", { "key": "address"}],
+  ["move_down", 20],
+  ["text", {"key": "from"}],
+  ["move_down", 15],
+  ["text", {"fragments": [{"body": "Invoice number: "}, {"key": "invoice_number"}]}],
+  ["move_down", 15],
+  ["text", {"fragments": [{"body": "Submitted on "}, {"key": "submission_date"}]}],
+  ["move_down", 30],
+  ["table"]
+]
