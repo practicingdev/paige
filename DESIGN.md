@@ -1,3 +1,9 @@
+## 2024-01-13
+
+Possible improvements:
+
+- Make command handlers customizable.
+
 ## 2024-01-11
 
 Possible improvements:

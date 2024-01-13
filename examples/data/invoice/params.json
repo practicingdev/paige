@@ -1,4 +1,7 @@
 { "from"    : "Ada Lovelace (ada@test.com)",
   "address" : "123 Any Street, London, UK",
   "invoice_number": "2024-01-AL",
-  "submission_date": "2024-01-11" }
+  "submission_date": "2024-01-11",
+  "itemized_summary": [["Pull a lever that solves a very difficult problem","$1"], 
+                       ["Putting in the work to know which lever to pull","$4999"],
+                       ["TOTAL PAYMENT DUE:", "$5000"]] }

@@ -9,5 +9,10 @@
   ["move_down", 15],
   ["text", {"fragments": [{"body": "Submitted on "}, {"key": "submission_date"}]}],
   ["move_down", 30],
-  ["table"]
+  ["table", { "key": "itemized_summary",
+               "column_widths": [350,150],
+               "column_settings": [[1, { "style": { "align": "right" }}]],
+               "row_settings":    [[-1, {"style": { "font_style": "bold" }}]],
+               "cells_settings": { "style": { "padding": 8}}}]
+              
 ]
