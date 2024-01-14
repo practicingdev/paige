@@ -1,8 +1,13 @@
 [
   ["span", {"proportion": 0.85, "position": "center", "contents": [
-    ["table", { "key": "sections", 
-                "column_proportions": [0.05, 0.9, 0.05],
-                "column_settings": [[-1, { "format": "number"}]],
-                 "cells_settings": { "style": { "borders": [] }} }]
+    ["for ->", { "key": "parts", "contents": [
+      ["move_down", 25],
+      ["text", { "key": "title", "style": "bold"}],
+      ["move_down", 10],
+      ["table", { "key": "chapters", 
+                  "column_proportions": [0.06, 0.84, 0.1],
+                  "column_settings": [[-1, { "format": "number"}]],
+                  "cells_settings": { "style": { "borders": [] }} }]
+     ]}]
   ]}]
 ]

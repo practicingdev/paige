@@ -9,10 +9,13 @@ module Paige
       render_commands(@template, params)
     end
 
-
     def render_commands(commands, params)
       commands.each do |command, settings|
         case command
+        when "for ->"
+          params[settings["key"]].each do |e|
+            render_commands(settings["contents"], e)
+          end
         when "span"
           span_opts = {}
           if settings["position"]

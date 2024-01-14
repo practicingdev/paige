@@ -1,11 +1,18 @@
-{
-  "sections": [["1.", "THE CHARACTERS OF THE STORY", 19],
-               ["2.", "ATTENTION AND EFFORT", 31],
-               ["3.", "THE LAZY CONTROLLER", 39],
-               ["4.", "THE ASSOCIATIVE MACHINE", 50],
-               ["5.", "COGNITIVE EASE", 59],
-               ["6.", "NORMS, SURPRISES, AND CAUSES", 71],
-               ["7.", "A MACHINE FOR JUMPING TO CONCLUSIONS", 79],
-               ["8.", "HOW JUDGEMENTS HAPPEN", 89],
-               ["9.", "ANSWERING AN EASIER QUESTION", 97]]
+{ "parts": [
+    { "title": "PART I. TWO SYSTEMS",
+      "chapters": [["1.", "THE CHARACTERS OF THE STORY", 19],
+                    ["2.", "ATTENTION AND EFFORT", 31],
+                    ["3.", "THE LAZY CONTROLLER", 39],
+                    ["4.", "THE ASSOCIATIVE MACHINE", 50],
+                    ["5.", "COGNITIVE EASE", 59],
+                    ["6.", "NORMS, SURPRISES, AND CAUSES", 71],
+                    ["7.", "A MACHINE FOR JUMPING TO CONCLUSIONS", 79],
+                    ["8.", "HOW JUDGEMENTS HAPPEN", 89],
+                    ["9.", "ANSWERING AN EASIER QUESTION", 97]] },
+    { "title": "PART II. HEURISTICS AND BIASES",
+      "chapters": [["10.", "THE LAW OF SMALL NUMBERS", 109],
+                   ["11.", "ANCHORS", 119],
+                   ["12.", "THE SCIENCE OF AVAILABILITY", 129],
+                   ["13.", "AVAILABILITY, EMOTION, AND RISK", 137]] }               
+  ] 
 }
