@@ -1,0 +1,8 @@
+[
+  ["span", {"proportion": 0.85, "position": "center", "contents": [
+    ["table", { "key": "sections", 
+                "column_proportions": [0.05, 0.9, 0.05],
+                "column_settings": [[-1, { "format": "number"}]],
+                 "cells_settings": { "style": { "borders": [] }} }]
+  ]}]
+]

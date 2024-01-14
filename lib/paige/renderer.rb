@@ -6,8 +6,20 @@ module Paige
     end
 
     def render(params)
-      @template.each do |command, settings|
+      render_commands(@template, params)
+    end
+
+
+    def render_commands(commands, params)
+      commands.each do |command, settings|
         case command
+        when "span"
+          span_opts = {}
+          if settings["position"]
+            span_opts[:position] = settings["position"].to_sym
+          end
+
+          @generator.span(settings["width"] || settings["proportion"] * @generator.bounds.width, span_opts) { render_commands(settings["contents"], params) } 
         when "text"
           settings.kind_of?(Array) 
           text_settings = {}
@@ -24,7 +36,15 @@ module Paige
           @generator.move_down(settings)
         when "table"
           table_settings = {}
-          table_settings.update(:column_widths => settings["column_widths"]) if settings["column_widths"]
+
+          case
+          when settings["column_widths"]
+            table_settings.update(:column_widths => settings["column_widths"])
+          when settings["column_proportions"]
+            table_settings.update(:column_widths => settings["column_proportions"].map { |e| e * @generator.bounds.width })
+          end
+
+          table_settings.update(:width => @generator.bounds.width) if settings["full_width"]
 
           @generator.table(settings["key"] ? params[settings["key"]] : settings["data"], table_settings) do
             (settings["column_settings"] || []).each do |index, column_settings|
@@ -35,6 +55,11 @@ module Paige
                 when "font_style"
                   column(index).style(:font_style => v.to_sym)
                 end
+              end
+
+              case column_settings["format"]
+              when "number"
+                column(index).style(:align => :right)
               end
             end
 
@@ -51,8 +76,8 @@ module Paige
 
             (settings["cells_settings"]&.[]("style") || {}).each do |k,v|
               case k
-              when "padding"
-                cells.style(:padding => v)
+              when "padding", "borders"
+                cells.style(k.to_sym => v)
               end
             end
           end

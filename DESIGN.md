@@ -3,6 +3,7 @@
 Possible improvements:
 
 - Make command handlers customizable.
+- Ruby + JS libraries that generate templates. Ruby library could even have a Prawn compatibility mode.
 
 ## 2024-01-11
 
